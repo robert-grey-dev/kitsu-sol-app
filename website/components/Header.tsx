@@ -43,12 +43,12 @@ export const Header = () => {
             <Link href="/" className="text-white/70 hover:text-white transition text-sm font-medium">
               Home
             </Link>
+            <Link href="/token" className="text-white/70 hover:text-[#FFD700] transition text-sm font-medium font-bold">
+              🪙 $KITS Token
+            </Link>
             <a href="#features" className="text-white/70 hover:text-white transition text-sm font-medium">
               Features
             </a>
-            <Link href="/gallery" className="text-white/70 hover:text-white transition text-sm font-medium">
-              Gallery
-            </Link>
             <a href="#how-it-works" className="text-white/70 hover:text-white transition text-sm font-medium">
               How it works
             </a>
