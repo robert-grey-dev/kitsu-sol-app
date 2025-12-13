@@ -1,4 +1,4 @@
-# Kitsu Inu (KITS) - Solana SPL Token
+1# Kitsu Inu (KITS) - Solana SPL Token
 
 Автоматическое создание токена **Kitsu Inu (KITS)** на Solana с возможностью самостоятельного управления ликвидностью.
 
