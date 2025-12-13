@@ -7,11 +7,11 @@ import { Footer } from '@/components/Footer'
 
 export default function TokenPage() {
   const tokenomics = [
-    { label: 'Liquidity Pool', percent: 40, color: '#FFD700' },
-    { label: 'Marketing & Growth', percent: 25, color: '#FFF4CC' },
-    { label: 'Team & Development', percent: 15, color: '#B8860B' },
-    { label: 'Community Rewards', percent: 15, color: '#4A90E2' },
-    { label: 'Initial Burn', percent: 5, color: '#FF6B6B' },
+    { label: 'Liquidity Pool (Locked 1 Year)', percent: 55, color: '#FFD700', locked: true },
+    { label: 'Marketing Budget', percent: 20, color: '#FFF4CC', locked: false },
+    { label: 'Community Airdrops & Rewards', percent: 12, color: '#4A90E2', locked: false },
+    { label: 'Platform Development', percent: 8, color: '#B8860B', locked: false },
+    { label: 'Initial Burn', percent: 5, color: '#FF6B6B', locked: true },
   ]
 
   const roadmap = [
@@ -124,7 +124,7 @@ export default function TokenPage() {
             {[
               { icon: <FaCoins />, value: '1T', label: 'Total Supply' },
               { icon: <FaFire />, value: '5%', label: 'Burned' },
-              { icon: <FaShieldAlt />, value: '40%', label: 'Liquidity Locked' },
+              { icon: <FaShieldAlt />, value: '55%', label: 'Liquidity Locked' },
               { icon: <FaUsers />, value: '0%', label: 'Tax' },
             ].map((stat, i) => (
               <motion.div
@@ -155,9 +155,13 @@ export default function TokenPage() {
             <h2 className="text-5xl font-black mb-4" style={{ fontFamily: 'Orbitron, sans-serif' }}>
               <span className="text-[#FFD700]">TOKENOMICS</span>
             </h2>
-            <p className="text-xl text-gray-300">
-              Fair distribution. Community first. No hidden allocations.
+            <p className="text-xl text-gray-300 mb-4">
+              55% Liquidity Locked. Community first. Maximum transparency.
             </p>
+            <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-green-500/10 border border-green-500/30">
+              <FaShieldAlt className="text-green-400" />
+              <span className="text-green-400 font-bold">Unruggable Design</span>
+            </div>
           </motion.div>
 
           <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -190,7 +194,14 @@ export default function TokenPage() {
               {tokenomics.map((item, i) => (
                 <div key={i} className="card">
                   <div className="flex justify-between items-center mb-2">
-                    <span className="font-bold">{item.label}</span>
+                    <div className="flex items-center gap-2">
+                      <span className="font-bold">{item.label}</span>
+                      {item.locked && (
+                        <span className="text-xs px-2 py-1 rounded-full bg-green-500/20 text-green-400 border border-green-500/30">
+                          🔒 LOCKED
+                        </span>
+                      )}
+                    </div>
                     <span className="text-2xl font-black" style={{ color: item.color }}>
                       {item.percent}%
                     </span>
@@ -206,6 +217,20 @@ export default function TokenPage() {
                   </div>
                 </div>
               ))}
+              
+              {/* Key Features */}
+              <div className="mt-8 p-6 rounded-2xl bg-gradient-to-r from-green-500/10 to-emerald-500/5 border border-green-500/20">
+                <h4 className="font-bold text-green-400 mb-3 flex items-center gap-2">
+                  <FaShieldAlt /> Security Features
+                </h4>
+                <ul className="space-y-2 text-sm text-gray-300">
+                  <li>✅ 55% Liquidity Locked for 1 Year (Streamflow)</li>
+                  <li>✅ 5% Supply Permanently Burned</li>
+                  <li>✅ 0% Buy/Sell Tax - Fair for Everyone</li>
+                  <li>✅ No Team Allocation - Community First</li>
+                  <li>✅ Renounced Mint Authority - Fixed Supply</li>
+                </ul>
+              </div>
             </motion.div>
           </div>
         </div>
