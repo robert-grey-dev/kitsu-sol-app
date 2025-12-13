@@ -2,6 +2,8 @@
 
 import { motion } from 'framer-motion'
 import { FaRocket, FaChartLine, FaCoins, FaUsers, FaFire, FaShieldAlt } from 'react-icons/fa'
+import { Header } from '@/components/Header'
+import { Footer } from '@/components/Footer'
 
 export default function TokenPage() {
   const tokenomics = [
@@ -61,6 +63,8 @@ export default function TokenPage() {
 
   return (
     <main className="min-h-screen bg-dark-bg text-white">
+      <Header />
+      
       {/* Hero Section */}
       <section className="relative overflow-hidden pt-32 pb-20 px-4">
         <div className="absolute inset-0">
@@ -334,6 +338,8 @@ export default function TokenPage() {
           </motion.div>
         </div>
       </section>
+
+      <Footer />
     </main>
   )
 }
