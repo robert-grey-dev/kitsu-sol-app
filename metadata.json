@@ -1,0 +1,47 @@
+{
+  "name": "Kitsu Inu",
+  "symbol": "KITS",
+  "description": "Первый мем-токен сообщества Kitsu Inu на Solana. Поднимаем Kitsu на луну вместе! 🐱🚀",
+  "image": "ЗАМЕНИ_НА_URL_КАРТИНКИ",
+  "external_url": "https://www.kitsuinu.com",
+  "attributes": [
+    {
+      "trait_type": "category",
+      "value": "cat"
+    },
+    {
+      "trait_type": "type",
+      "value": "meme"
+    },
+    {
+      "trait_type": "type",
+      "value": "memecoin"
+    },
+    {
+      "trait_type": "project",
+      "value": "kitsuinu"
+    },
+    {
+      "trait_type": "symbol",
+      "value": "kits"
+    }
+  ],
+  "properties": {
+    "files": [
+      {
+        "uri": "ЗАМЕНИ_НА_URL_КАРТИНКИ",
+        "type": "image/png"
+      }
+    ],
+    "category": "image",
+    "creators": []
+  },
+  "social": {
+    "website": "https://www.kitsuinu.com",
+    "telegram": "https://t.me/",
+    "discord": "https://discord.com/",
+    "twitter": "https://x.com/kitsu_inu_"
+  }
+}
+
+

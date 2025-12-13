@@ -1,0 +1,12 @@
+<!-- Placeholder: положи сюда cat-mascot.png -->
+<svg width="400" height="400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="400" fill="#1a1a1a"/>
+  <text x="200" y="200" font-family="Arial" font-size="20" fill="#B026FF" text-anchor="middle">
+    cat-mascot.png
+  </text>
+  <text x="200" y="230" font-family="Arial" font-size="14" fill="#666" text-anchor="middle">
+    400x400px PNG
+  </text>
+</svg>
+
+

@@ -1,0 +1,24 @@
+{
+  "name": "kitsu-inu-token",
+  "version": "1.0.0",
+  "description": "Kitsu Inu (KITS) - Solana SPL Token с собственной ликвидностью",
+  "main": "create-token.js",
+  "type": "module",
+  "scripts": {
+    "create": "node create-token.js",
+    "upload-metadata": "node upload-metadata.js"
+  },
+  "dependencies": {
+    "@solana/web3.js": "^1.87.6",
+    "@solana/spl-token": "^0.3.9",
+    "@metaplex-foundation/mpl-token-metadata": "^3.2.1",
+    "@metaplex-foundation/umi": "^0.9.1",
+    "@metaplex-foundation/umi-bundle-defaults": "^0.9.1",
+    "dotenv": "^16.3.1",
+    "form-data": "^4.0.0",
+    "axios": "^1.6.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.5"
+  }
+}
