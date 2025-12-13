@@ -4,11 +4,11 @@ import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 
 const heroImages = [
-  '/images/hero/Gemini_Generated_Image_6zk14v6zk14v6zk1.png',
-  '/images/hero/Gemini_Generated_Image_embf56embf56embf.png',
-  '/images/hero/Gemini_Generated_Image_9e9jl49e9jl49e9j.png',
-  '/images/hero/Gemini_Generated_Image_g9j29pg9j29pg9j2.png',
-  '/images/hero/Gemini_Generated_Image_mie2snmie2snmie2.png',
+  '/images/hero/hero-1.png',
+  '/images/hero/hero-2.png',
+  '/images/hero/hero-3.png',
+  '/images/hero/hero-4.png',
+  '/images/hero/hero-5.png',
 ]
 
 export const ImageSlider = () => {

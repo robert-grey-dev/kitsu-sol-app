@@ -6,18 +6,18 @@ import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
 
 const images = [
-  '/images/hero/Gemini_Generated_Image_6zk14v6zk14v6zk1.png',
-  '/images/hero/Gemini_Generated_Image_embf56embf56embf.png',
-  '/images/hero/Gemini_Generated_Image_9e9jl49e9jl49e9j.png',
-  '/images/hero/Gemini_Generated_Image_g9j29pg9j29pg9j2.png',
-  '/images/hero/Gemini_Generated_Image_mie2snmie2snmie2.png',
-  '/images/hero/Gemini_Generated_Image_5ffvio5ffvio5ffv.png',
-  '/images/hero/Gemini_Generated_Image_rbomsbrbomsbrbom.png',
-  '/images/hero/Gemini_Generated_Image_wx5cz6wx5cz6wx5c.png',
-  '/images/hero/Gemini_Generated_Image_y9h0wby9h0wby9h0.png',
-  '/images/hero/Gemini_Generated_Image_fbg2r6fbg2r6fbg2.png',
-  '/images/hero/Gemini_Generated_Image_tzlsnwtzlsnwtzls.png',
-  '/images/hero/Gemini_Generated_Image_1oq8w41oq8w41oq8.png',
+  '/images/hero/hero-1.png',
+  '/images/hero/hero-2.png',
+  '/images/hero/hero-3.png',
+  '/images/hero/hero-4.png',
+  '/images/hero/hero-5.png',
+  '/images/hero/hero-6.png',
+  '/images/hero/hero-7.png',
+  '/images/hero/hero-8.png',
+  '/images/hero/hero-9.png',
+  '/images/hero/hero-10.png',
+  '/images/hero/hero-11.png',
+  '/images/hero/hero-12.png',
 ]
 
 export default function Gallery() {
