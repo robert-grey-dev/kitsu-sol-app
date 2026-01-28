@@ -62,18 +62,9 @@ function checkRateLimit(ip: string): boolean {
   return true
 }
 
-// Proxy RPC requests to Solana with rate limiting and security
+// Proxy RPC requests to Solana with security
 export async function POST(req: NextRequest) {
   try {
-    // Get client IP and check rate limit
-    const clientIP = getClientIP(req)
-    if (!checkRateLimit(clientIP)) {
-      return NextResponse.json(
-        { error: 'Rate limit exceeded. Please try again later.' },
-        { status: 429 }
-      )
-    }
-
     const body = await req.json()
     
     // Validate request to prevent injection attacks
