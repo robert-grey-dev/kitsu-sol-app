@@ -41,7 +41,18 @@ Place your token image file in the project root directory.
 ```bash
 PINATA_API_KEY=your_api_key
 PINATA_SECRET_API_KEY=your_secret_key
+
+# Optional: Use Helius RPC for better performance (recommended for production)
+SOLANA_RPC_URL=https://mainnet.helius-rpc.com/?api-key=your_helius_api_key
+NEXT_PUBLIC_SITE_URL=https://kitsuinu.com
 ```
+
+**Get Free Helius RPC (Recommended):**
+1. Go to https://www.helius.dev/
+2. Sign up for free account (100k requests/day)
+3. Create a new API key
+4. Add to `.env` file as shown above
+5. This prevents RPC rate limiting (429 errors)
 
 **Upload metadata:**
 ```bash
