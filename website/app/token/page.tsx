@@ -62,7 +62,7 @@ export default function TokenPage() {
             className="inline-flex items-center gap-2 cyber-border rounded-full px-6 py-3 mb-6 hover:scale-105 transition-transform cursor-pointer"
           >
             <span className="text-gray-400 text-sm">CA:</span>
-            <span className="text-[#FFD700] font-bold text-lg tracking-wide">$KITS</span>
+            <span className="text-[#FFD700] font-bold text-lg tracking-wide">3L64f4vgVNY8FPneovWdeSPTDgyzFbdRksbNF1Depump</span>
           </motion.div>
 
           {/* Tagline */}
@@ -85,7 +85,7 @@ export default function TokenPage() {
             className="flex flex-col sm:flex-row items-center justify-center gap-4"
           >
             <a 
-              href="https://pump.fun"
+              href="https://pump.fun/coin/3L64f4vgVNY8FPneovWdeSPTDgyzFbdRksbNF1Depump"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary text-lg px-10 py-4 relative overflow-hidden group w-full sm:w-auto"
@@ -162,7 +162,7 @@ export default function TokenPage() {
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
             <a 
-              href="https://pump.fun"
+              href="https://pump.fun/coin/3L64f4vgVNY8FPneovWdeSPTDgyzFbdRksbNF1Depump"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary text-lg px-10 py-4 relative overflow-hidden group"
@@ -223,7 +223,7 @@ export default function TokenPage() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                   <a 
-                    href="https://pump.fun" 
+                    href="https://pump.fun/coin/3L64f4vgVNY8FPneovWdeSPTDgyzFbdRksbNF1Depump" 
                     target="_blank" 
                     rel="noopener noreferrer" 
                     className="btn-primary text-lg px-12 py-5 relative overflow-hidden group/btn w-full sm:w-auto"
