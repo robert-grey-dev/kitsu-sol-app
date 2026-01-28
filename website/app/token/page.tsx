@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { FaRocket, FaChartLine, FaCoins, FaUsers, FaFire, FaShieldAlt } from 'react-icons/fa'
+import Image from 'next/image'
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
 
@@ -27,11 +28,17 @@ export default function TokenPage() {
             className="relative inline-block mb-8"
           >
             <div className="absolute inset-0 rounded-full bg-[#FFD700]/30 blur-3xl animate-pulse scale-150" />
-            <img 
-              src="/logo.png" 
-              alt="Kitsu Inu"
-              className="relative w-40 h-40 md:w-56 md:h-56 mx-auto rounded-full border-4 border-[#FFD700] shadow-2xl shadow-[#FFD700]/50 hover:scale-105 transition-transform duration-500"
-            />
+            <div className="relative w-40 h-40 md:w-56 md:h-56 mx-auto rounded-full border-4 border-[#FFD700] shadow-2xl shadow-[#FFD700]/50 hover:scale-105 transition-transform duration-500 overflow-hidden">
+              <Image 
+                src="/logo.png" 
+                alt="Kitsu Inu"
+                fill
+                sizes="(max-width: 768px) 160px, 224px"
+                className="object-cover"
+                priority
+                quality={95}
+              />
+            </div>
           </motion.div>
 
           {/* Title */}

@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import Image from 'next/image'
 
 const heroImages = [
   '/images/hero/hero-1.png',
@@ -17,7 +18,7 @@ export const ImageSlider = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % heroImages.length)
-    }, 4000) // Change every 4 seconds
+    }, 4000)
 
     return () => clearInterval(timer)
   }, [])
@@ -38,10 +39,14 @@ export const ImageSlider = () => {
             transition={{ duration: 0.6 }}
             className="absolute inset-0"
           >
-            <img 
+            <Image 
               src={heroImages[currentIndex]}
               alt={`Kitsu Inu ${currentIndex + 1}`}
-              className="w-full h-full object-contain drop-shadow-2xl"
+              fill
+              sizes="(max-width: 768px) 100vw, 448px"
+              className="object-contain drop-shadow-2xl"
+              priority={currentIndex === 0}
+              quality={90}
             />
           </motion.div>
         </AnimatePresence>

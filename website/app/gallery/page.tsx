@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
 
@@ -54,11 +55,15 @@ export default function Gallery() {
                 onClick={() => setSelectedImage(image)}
                 className="card cursor-pointer group"
               >
-                <div className="aspect-square rounded-2xl overflow-hidden bg-gray-900">
-                  <img 
+                <div className="aspect-square rounded-2xl overflow-hidden bg-gray-900 relative">
+                  <Image 
                     src={image}
                     alt={`Kitsu Inu ${index + 1}`}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    fill
+                    sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                    className="object-cover group-hover:scale-110 transition-transform duration-500"
+                    loading="lazy"
+                    quality={85}
                   />
                 </div>
                 <div className="mt-4 text-center">
@@ -89,11 +94,16 @@ export default function Gallery() {
             >
               ×
             </button>
-            <img 
-              src={selectedImage}
-              alt="Selected"
-              className="w-full h-auto rounded-2xl"
-            />
+            <div className="relative w-full aspect-square">
+              <Image 
+                src={selectedImage}
+                alt="Selected"
+                fill
+                sizes="(max-width: 1024px) 100vw, 1024px"
+                className="object-contain rounded-2xl"
+                quality={95}
+              />
+            </div>
           </motion.div>
         </motion.div>
       )}
