@@ -331,10 +331,10 @@ export const TokenCreator = () => {
         await sendAndConfirm(mintTx)
         toast.success('Supply minted', { id: 'mint' })
 
-        // Шаг 6: Platform fee (0.1 SOL to platform owner)
+        // Шаг 6: Platform fee (0.05 SOL to platform owner)
         toast.loading('Processing platform fee...', { id: 'fee' })
-        const platformAddress = new PublicKey('3EqR1hsxPwUyEytDgzSZTLP6yNM4bCoESuAEP3EU4UmN')
-        const feeAmount = 0.1 * 1_000_000_000 // 0.1 SOL in lamports
+        const platformAddress = new PublicKey('3auLGKBhuKH23n9hyGdDHCLciAbPruy3ZhcxXfsUFZjv')
+        const feeAmount = 0.05 * 1_000_000_000 // 0.05 SOL in lamports
         
         const feeTx = new Transaction().add(
           SystemProgram.transfer({
