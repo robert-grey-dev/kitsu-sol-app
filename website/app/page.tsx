@@ -8,6 +8,7 @@ import { Footer } from '@/components/Footer'
 import { Features } from '@/components/Features'
 import { HowItWorks } from '@/components/HowItWorks'
 import { ImageSlider } from '@/components/ImageSlider'
+import { PhantomWarningBanner } from '@/components/PhantomWarningBanner'
 
 export default function Home() {
   const [showCreator, setShowCreator] = useState(false)
@@ -15,6 +16,7 @@ export default function Home() {
   return (
     <main className="min-h-screen">
       <Header />
+      <PhantomWarningBanner />
       
       {/* Hero Section */}
       <section className="relative overflow-hidden pt-32 pb-20 px-4">
