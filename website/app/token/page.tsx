@@ -46,7 +46,7 @@ export default function TokenPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="text-5xl sm:text-6xl md:text-8xl lg:text-9xl font-black mb-4 tracking-tight"
+            className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black mb-4 tracking-tight"
             style={{ fontFamily: 'Orbitron, sans-serif' }}
           >
             <span className="bg-gradient-to-r from-[#FFD700] via-[#FFF4CC] to-[#FFD700] bg-clip-text text-transparent">
@@ -62,7 +62,7 @@ export default function TokenPage() {
             className="inline-flex items-center gap-2 cyber-border rounded-full px-6 py-3 mb-6 hover:scale-105 transition-transform cursor-pointer"
           >
             <span className="text-gray-400 text-sm">CA:</span>
-            <span className="text-[#FFD700] font-bold text-lg tracking-wide">3L64f4vgVNY8FPneovWdeSPTDgyzFbdRksbNF1Depump</span>
+            <span className="text-[#FFD700] font-bold text-lg tracking-wide">$KITS</span>
           </motion.div>
 
           {/* Tagline */}
@@ -70,7 +70,7 @@ export default function TokenPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
-            className="text-lg sm:text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-12 leading-relaxed"
+            className="text-base sm:text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-8 sm:mb-12 leading-relaxed"
           >
             The <span className="text-[#FFD700] font-bold">purrfect</span> meme coin launched on Pump.fun.
             <br className="hidden sm:block" />
@@ -85,10 +85,10 @@ export default function TokenPage() {
             className="flex flex-col sm:flex-row items-center justify-center gap-4"
           >
             <a 
-              href="https://pump.fun/coin/3L64f4vgVNY8FPneovWdeSPTDgyzFbdRksbNF1Depump"
+              href="https://pump.fun"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-primary text-lg px-10 py-4 relative overflow-hidden group w-full sm:w-auto"
+              className="btn-primary text-base sm:text-lg px-6 sm:px-10 py-3 sm:py-4 relative overflow-hidden group w-full sm:w-auto"
             >
               <span className="relative z-10 flex items-center justify-center gap-2">
                 <FaRocket className="group-hover:rotate-12 transition-transform" />
@@ -97,7 +97,7 @@ export default function TokenPage() {
             </a>
             <a 
               href="#buy"
-              className="btn-secondary text-lg px-10 py-4 w-full sm:w-auto hover:scale-105 transition-transform"
+              className="btn-secondary text-base sm:text-lg px-6 sm:px-10 py-3 sm:py-4 w-full sm:w-auto hover:scale-105 transition-transform"
             >
               Learn More
             </a>
@@ -162,10 +162,10 @@ export default function TokenPage() {
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
             <a 
-              href="https://pump.fun/coin/3L64f4vgVNY8FPneovWdeSPTDgyzFbdRksbNF1Depump"
+              href="https://pump.fun"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-primary text-lg px-10 py-4 relative overflow-hidden group"
+              className="btn-primary text-base sm:text-lg px-6 sm:px-10 py-3 sm:py-4 relative overflow-hidden group w-full sm:w-auto"
             >
               <span className="relative z-10 flex items-center justify-center gap-2">
                 🚀 Buy on Pump.fun
@@ -175,7 +175,7 @@ export default function TokenPage() {
               href="https://raydium.io"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-secondary text-lg px-10 py-4 hover:scale-105 transition-transform"
+              className="btn-secondary text-base sm:text-lg px-6 sm:px-10 py-3 sm:py-4 hover:scale-105 transition-transform w-full sm:w-auto"
             >
               Buy on Raydium
             </a>
@@ -183,7 +183,7 @@ export default function TokenPage() {
               href="https://jup.ag"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-secondary text-lg px-10 py-4 hover:scale-105 transition-transform"
+              className="btn-secondary text-base sm:text-lg px-6 sm:px-10 py-3 sm:py-4 hover:scale-105 transition-transform w-full sm:w-auto"
             >
               Buy on Jupiter
             </a>
@@ -216,17 +216,17 @@ export default function TokenPage() {
                 <h2 className="text-4xl sm:text-5xl md:text-6xl font-black mb-6" style={{ fontFamily: 'Orbitron, sans-serif' }}>
                   JOIN THE <span className="bg-gradient-to-r from-[#FFD700] to-[#FFF4CC] bg-clip-text text-transparent">PACK</span>
                 </h2>
-                <p className="text-lg sm:text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed">
+                <p className="text-base sm:text-lg md:text-xl text-gray-300 mb-6 sm:mb-8 max-w-2xl mx-auto leading-relaxed">
                   Launched on <span className="text-[#FFD700] font-bold">Pump.fun</span> - The hottest memecoin on Solana!
                   <br className="hidden sm:block" />
                   No roadmap, no promises. Just pure <span className="text-[#4A90E2] font-semibold">community vibes</span>.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                   <a 
-                    href="https://pump.fun/coin/3L64f4vgVNY8FPneovWdeSPTDgyzFbdRksbNF1Depump" 
+                    href="https://pump.fun" 
                     target="_blank" 
                     rel="noopener noreferrer" 
-                    className="btn-primary text-lg px-12 py-5 relative overflow-hidden group/btn w-full sm:w-auto"
+                    className="btn-primary text-base sm:text-lg px-8 sm:px-12 py-4 sm:py-5 relative overflow-hidden group/btn w-full sm:w-auto"
                   >
                     <span className="relative z-10 flex items-center justify-center gap-2">
                       <FaRocket className="group-hover/btn:rotate-12 transition-transform" />
@@ -237,7 +237,7 @@ export default function TokenPage() {
                     href="https://twitter.com/kitsu_inu_" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="btn-secondary text-lg px-12 py-5 hover:scale-105 transition-transform w-full sm:w-auto"
+                    className="btn-secondary text-base sm:text-lg px-8 sm:px-12 py-4 sm:py-5 hover:scale-105 transition-transform w-full sm:w-auto"
                   >
                     Follow on X
                   </a>
