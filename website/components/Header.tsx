@@ -43,15 +43,15 @@ export const Header = () => {
             <Link href="/" className="text-white/70 hover:text-white transition text-sm font-medium">
               Home
             </Link>
-            <Link href="/token" className="text-white/70 hover:text-[#FFD700] transition text-sm font-medium font-bold">
-              🪙 $KITS Token
-            </Link>
             <a href="#features" className="text-white/70 hover:text-white transition text-sm font-medium">
               Features
             </a>
             <a href="#how-it-works" className="text-white/70 hover:text-white transition text-sm font-medium">
               How it works
             </a>
+            <Link href="/token" className="text-white/70 hover:text-[#FFD700] transition text-sm font-medium font-bold">
+              🪙 $KITS Token
+            </Link>
           </nav>
 
           {/* Social Links & Wallet */}
@@ -66,15 +66,7 @@ export const Header = () => {
                 <FaTwitter size={20} />
               </a>
               <a 
-                href="https://t.me/" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-white/50 hover:text-white transition"
-              >
-                <FaTelegram size={20} />
-              </a>
-              <a 
-                href="https://github.com" 
+                href="https://github.com/robert-grey-dev/kitsu-sol-app" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-white/50 hover:text-white transition"

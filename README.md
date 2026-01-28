@@ -1,235 +1,252 @@
-# Kitsu Inu (KITS) - Solana SPL Token
+# Kitsu Inu (KITS) - Solana SPL Token & Platform
 
-Автоматическое создание токена **Kitsu Inu (KITS)** на Solana с возможностью самостоятельного управления ликвидностью.
+A comprehensive Solana token creation platform featuring **Kitsu Inu (KITS)** memecoin with automated token deployment and liquidity management capabilities.
 
-## 📋 Параметры токена
+## 📋 Token Parameters
 
-- **Название**: Kitsu Inu
-- **Символ**: KITS
+- **Name**: Kitsu Inu
+- **Symbol**: KITS
 - **Decimals**: 6
-- **Supply**: 1,000,000,000,000 (1 триллион)
-- **Категория**: Meme Token
-- **Теги**: cat, meme, memecoin, kitsuinu, kits
+- **Total Supply**: 1,000,000,000,000 (1 Trillion)
+- **Category**: Meme Token
+- **Tags**: cat, meme, memecoin, kitsuinu, kits
+- **Network**: Solana
 
-## 🌐 Социальные сети
+## 🌐 Official Links
 
 - **Website**: https://www.kitsuinu.com
 - **Twitter**: https://x.com/kitsu_inu_
-- **Telegram**: https://t.me/
-- **Discord**: https://discord.com/
+- **GitHub**: https://github.com/robert-grey-dev/kitsu-sol-app
 
-## 🚀 Быстрый старт
+## 🚀 Quick Start
 
-### 1. Установка
+### 1. Installation
 
 ```bash
 npm install
 ```
 
-### 2. Подготовка изображения
+### 2. Image Preparation
 
-Поместите файл `ChatGPT Image 3 нояб. 2025 г., 19_53_20.png` в корень проекта.
+Place your token image file in the project root directory.
 
-### 3. Загрузка метаданных на IPFS
+### 3. Upload Metadata to IPFS
 
-**Регистрация на Pinata:**
-1. Перейдите на https://pinata.cloud (бесплатно)
-2. Создайте аккаунт
-3. Получите API ключи в разделе API Keys
+**Register on Pinata:**
+1. Go to https://pinata.cloud (free tier available)
+2. Create an account
+3. Get your API keys from the API Keys section
 
-**Создайте файл `.env`:**
+**Create `.env` file:**
 ```bash
-PINATA_API_KEY=ваш_api_key
-PINATA_SECRET_API_KEY=ваш_secret_key
+PINATA_API_KEY=your_api_key
+PINATA_SECRET_API_KEY=your_secret_key
 ```
 
-**Загрузите метаданные:**
+**Upload metadata:**
 ```bash
 npm run upload-metadata
 ```
 
-**Обновите `create-token.js`:**
-- Скопируйте полученный URL метаданных
-- Откройте `create-token.js`
-- Найдите строку `metadataUri: 'ЗАМЕНИ_НА_URL_METADATA_JSON'`
-- Вставьте ваш URL
+**Update `create-token.js`:**
+- Copy the generated metadata URL
+- Open `create-token.js`
+- Find the line `metadataUri: 'REPLACE_WITH_METADATA_JSON_URL'`
+- Paste your URL
 
-### 4. Создание токена
+### 4. Token Creation
 
-**Для теста (devnet - бесплатно):**
+**For testing (devnet - free):**
 ```bash
 npm run create
 ```
 
-**Для реального выпуска (mainnet):**
-1. Откройте `create-token.js`
-2. Измените `const NETWORK = 'devnet'` на `'mainnet-beta'`
-3. Убедитесь, что на кошельке минимум **0.5 SOL**
-4. Запустите:
+**For production (mainnet):**
+1. Open `create-token.js`
+2. Change `const NETWORK = 'devnet'` to `'mainnet-beta'`
+3. Ensure your wallet has at least **0.5 SOL**
+4. Run:
 ```bash
 npm run create
 ```
 
-## 💰 Создание пула ликвидности
+## 💰 Creating Liquidity Pool
 
-После создания токена вам нужно добавить ликвидность:
+After token creation, you need to add liquidity:
 
-### Вариант 1: Raydium (рекомендуется)
+### Option 1: Raydium (Recommended)
 
-1. Перейдите на https://raydium.io/liquidity/create/
-2. Подключите кошелек (Phantom/Solflare)
-3. Вставьте mint адрес вашего токена
-4. Создайте пару **KITS/SOL**
-5. Добавьте ликвидность:
-   - Рекомендуется: 50% токенов + соответствующее количество SOL
-   - Пример: 500,000,000,000 KITS + 10 SOL
-6. Получите LP токены
+1. Go to https://raydium.io/liquidity/create/
+2. Connect your wallet (Phantom/Solflare)
+3. Paste your token mint address
+4. Create **KITS/SOL** pair
+5. Add liquidity:
+   - Recommended: 50% of tokens + corresponding SOL amount
+   - Example: 500,000,000,000 KITS + 10 SOL
+6. Receive LP tokens
 
-### Вариант 2: Orca
+### Option 2: Orca
 
-1. Перейдите на https://www.orca.so/pools
-2. Создайте новый пул
-3. Выберите пару KITS/SOL
-4. Добавьте ликвидность
+1. Go to https://www.orca.so/pools
+2. Create a new pool
+3. Select KITS/SOL pair
+4. Add liquidity
 
-### Фиксация ликвидности (важно!)
+### Locking Liquidity (Important!)
 
-Чтобы сообщество доверяло токену, зафиксируйте LP токены:
+To build community trust, lock your LP tokens:
 
-**Вариант А: Burn (сжечь)**
+**Option A: Burn**
 ```bash
-spl-token burn LP_TOKEN_ADDRESS КОЛИЧЕСТВО
+spl-token burn LP_TOKEN_ADDRESS AMOUNT
 ```
 
-**Вариант Б: Lock (заблокировать)**
-Используйте сервисы:
+**Option B: Lock**
+Use these services:
 - https://www.streamflow.finance/
 - https://app.unloc.xyz/
 
-## 📁 Структура проекта
+## 📁 Project Structure
 
 ```
-creatsolananmeme/
-├── create-token.js          # Скрипт создания токена
-├── upload-metadata.js       # Загрузка на IPFS
-├── metadata.json           # Метаданные токена
-├── package.json            # Зависимости
-├── .env                    # API ключи (не коммитить!)
-├── README.md               # Этот файл
-└── ИНСТРУКЦИЯ.md          # Подробная инструкция на русском
+kitsu-sol-app/
+├── website/                 # Next.js website
+│   ├── app/                # App directory
+│   ├── components/         # React components
+│   └── public/            # Static assets
+├── create-token.js         # Token creation script
+├── upload-metadata.js      # IPFS upload script
+├── metadata.json          # Token metadata
+├── package.json           # Dependencies
+├── .env                   # API keys (DO NOT COMMIT!)
+└── README.md              # This file
 ```
 
-## 🔐 Безопасность
+## 🔐 Security
 
-### После создания токена:
+### After token creation:
 
-- `wallet.json` - **ВАШ ПРИВАТНЫЙ КЛЮЧ** - ХРАНИТЕ В БЕЗОПАСНОСТИ!
-- `token-info.json` - информация о токене
-- `ipfs-links.json` - ссылки на IPFS
+- `wallet.json` - **YOUR PRIVATE KEY** - KEEP IT SAFE!
+- `token-info.json` - Token information
+- `ipfs-links.json` - IPFS links
 
-### ВАЖНО:
-- Сделайте резервную копию `wallet.json`
-- Никому не показывайте приватный ключ
-- Не загружайте `wallet.json` в Git
+### IMPORTANT:
+- Make a backup of `wallet.json`
+- Never share your private key
+- Do not commit `wallet.json` to Git
+- Store private keys securely
 
-## 📝 Что делает скрипт
+## 📝 What the Script Does
 
-1. ✅ Создает/загружает кошелек
-2. ✅ Подключается к Solana
-3. ✅ Запрашивает airdrop (devnet)
-4. ✅ Создает mint токена
-5. ✅ Создает Associated Token Account
-6. ✅ Выпускает 1 триллион токенов
-7. ✅ Добавляет метаданные Metaplex
-8. ✅ Сохраняет информацию
+1. ✅ Creates/loads wallet
+2. ✅ Connects to Solana network
+3. ✅ Requests airdrop (devnet only)
+4. ✅ Creates token mint
+5. ✅ Creates Associated Token Account
+6. ✅ Mints 1 trillion tokens
+7. ✅ Adds Metaplex metadata
+8. ✅ Saves token information
 
-## 🎯 Дальнейшие действия
+## 🎯 Next Steps
 
-### 1. Проверка токена
+### 1. Verify Token
 - Devnet: https://explorer.solana.com/address/MINT?cluster=devnet
 - Mainnet: https://solscan.io/token/MINT
 
-### 2. Добавление ликвидности
-- Raydium или Orca (см. выше)
-- Рекомендуется: 40-50% supply
+### 2. Add Liquidity
+- Use Raydium or Orca (see above)
+- Recommended: 40-50% of total supply
 
-### 3. Маркетинг
-- Twitter: мемы, обновления, community
-- Telegram: создайте группу
-- Discord: сервер для холдеров
-- Рейды и giveaway
+### 3. Marketing
+- Twitter: Memes, updates, community engagement
+- Build community presence
+- Engage with Solana ecosystem
+- Run campaigns and giveaways
 
-### 4. Листинг
+### 4. Listings
 - CoinGecko: https://www.coingecko.com/en/coins/new
 - CoinMarketCap: https://coinmarketcap.com/request/
-- DexScreener: появится автоматически после создания пула
+- DexScreener: Appears automatically after pool creation
 
 ## ❓ FAQ
 
-**Q: Сколько стоит создать токен?**  
-A: На devnet бесплатно. На mainnet ~0.1-0.5 SOL.
+**Q: How much does it cost to create a token?**  
+A: On devnet it's free. On mainnet approximately 0.1-0.5 SOL.
 
-**Q: Могу ли я создать больше токенов позже?**  
-A: Да, если не отключили mint authority. Установите `REVOKE_MINT = true` в коде для фиксации supply.
+**Q: Can I mint more tokens later?**  
+A: Yes, if you haven't revoked mint authority. Set `REVOKE_MINT = true` in code to fix the supply.
 
-**Q: Как передать токены?**  
+**Q: How do I transfer tokens?**  
 A: 
 ```bash
-spl-token transfer MINT_ADDRESS КОЛИЧЕСТВО АДРЕС_ПОЛУЧАТЕЛЯ
+spl-token transfer MINT_ADDRESS AMOUNT RECIPIENT_ADDRESS
 ```
 
-**Q: Сколько ликвидности добавить?**  
-A: Рекомендуется 40-50% от total supply + достаточно SOL для начальной капитализации.
+**Q: How much liquidity should I add?**  
+A: Recommended 40-50% of total supply + sufficient SOL for initial market cap.
 
-**Q: Что делать после создания пула?**  
-A: Зафиксируйте LP токены (burn/lock) и начните маркетинг.
+**Q: What to do after creating the pool?**  
+A: Lock LP tokens (burn/lock) and begin marketing efforts.
 
-## 🐛 Решение проблем
+## 🐛 Troubleshooting
 
 ### "Insufficient funds"
-Пополните кошелек SOL
+Add SOL to your wallet
 
 ### "Failed to fetch"
-Проверьте интернет или смените RPC
+Check your internet connection or switch RPC endpoint
 
 ### "Invalid metadata URI"
-Убедитесь, что metadata.json доступен по URL
+Ensure metadata.json is accessible via the URL
 
-### Токен без метаданных
-Добавьте позже через metaboss:
+### Token without metadata
+Add metadata later using metaboss:
 ```bash
 npm install -g @metaplex-foundation/metaboss
 metaboss update uri -a MINT -u METADATA_URL
 ```
 
-## 💡 Полезные команды
+## 💡 Useful Commands
 
 ```bash
-# Проверить баланс SOL
+# Check SOL balance
 solana balance
 
-# Проверить баланс токена
+# Check token balance
 spl-token balance MINT_ADDRESS
 
-# Информация о токене
+# Display token information
 spl-token display MINT_ADDRESS
 
-# Отключить mint authority
+# Revoke mint authority
 spl-token authorize MINT_ADDRESS mint --disable
 ```
 
-## 📞 Поддержка
+## 📞 Support & Resources
 
-- Документация Solana: https://docs.solana.com
+- Solana Documentation: https://docs.solana.com
 - Raydium Docs: https://docs.raydium.io
-- Discord Solana: https://discord.gg/solana
+- Solana Discord: https://discord.gg/solana
+- GitHub Issues: https://github.com/robert-grey-dev/kitsu-sol-app/issues
 
-## ⚠️ Дисклеймер
+## 🛠️ Tech Stack
 
-Создание и торговля криптовалютами может регулироваться законами вашей юрисдикции. Этот проект создан в образовательных целях. Используйте на свой риск.
+- **Frontend**: Next.js 14, React, TypeScript
+- **Styling**: Tailwind CSS, Framer Motion
+- **Blockchain**: Solana Web3.js, SPL Token
+- **Wallet**: Solana Wallet Adapter
+- **Metadata**: Metaplex, IPFS (Pinata)
+
+## ⚠️ Disclaimer
+
+Creating and trading cryptocurrencies may be subject to legal regulations in your jurisdiction. This project is created for educational purposes. Use at your own risk. Always do your own research (DYOR) before investing in any cryptocurrency.
+
+## 📄 License
+
+MIT License - feel free to use this project for your own tokens!
 
 ---
 
-**Удачи с Kitsu Inu! 🐱🚀 К луне!** 🌙
+**Good luck with Kitsu Inu! 🐱🚀 To the moon!** 🌙
 
 

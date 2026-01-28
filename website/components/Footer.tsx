@@ -1,6 +1,7 @@
 'use client'
 
 import { FaTwitter, FaTelegram, FaDiscord, FaGithub } from 'react-icons/fa'
+import Image from 'next/image'
 
 export const Footer = () => {
   return (
@@ -10,7 +11,15 @@ export const Footer = () => {
           {/* About */}
           <div>
             <div className="flex items-center space-x-2 mb-4">
-              <span className="text-3xl">🐱</span>
+              <div className="relative w-8 h-8 rounded-full overflow-hidden border border-white/15 bg-white/5">
+                <Image
+                  src="/logo.png"
+                  alt="Kitsu Inu"
+                  fill
+                  sizes="32px"
+                  className="object-cover"
+                />
+              </div>
               <h3 className="text-xl font-bold gradient-text">Kitsu Inu</h3>
             </div>
             <p className="text-gray-400 text-sm">
@@ -85,23 +94,7 @@ export const Footer = () => {
                 <FaTwitter />
               </a>
               <a 
-                href="https://t.me/" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-solana-purple transition"
-              >
-                <FaTelegram />
-              </a>
-              <a 
-                href="https://discord.com" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-solana-purple transition"
-              >
-                <FaDiscord />
-              </a>
-              <a 
-                href="https://github.com" 
+                href="https://github.com/robert-grey-dev/kitsu-sol-app" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-solana-purple transition"

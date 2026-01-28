@@ -31,6 +31,8 @@ html {
   scroll-behavior: smooth;
   /* offset for fixed header */
   scroll-padding-top: 96px;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -38,6 +40,7 @@ body {
   background: radial-gradient(1200px 800px at 20% 20%, rgba(200, 168, 91, 0.10), transparent 60%),
               radial-gradient(900px 700px at 80% 40%, rgba(255, 255, 255, 0.06), transparent 60%),
               linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%);
+  background-attachment: fixed;
   min-height: 100vh;
   position: relative;
   overflow-x: hidden;
@@ -84,21 +87,26 @@ main, header, footer {
 
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 10px;
+  background: var(--bg);
 }
 
 html {
   overflow-y: scroll;
   overflow-x: hidden;
+  scrollbar-color: rgba(255, 255, 255, 0.12) var(--bg);
+  scrollbar-width: thin;
 }
 
 ::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.04);
+  background: var(--bg);
+  border-left: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 ::-webkit-scrollbar-thumb {
   background: rgba(255, 255, 255, 0.12);
   border-radius: 10px;
+  border: 2px solid var(--bg);
 }
 
 ::-webkit-scrollbar-thumb:hover {
